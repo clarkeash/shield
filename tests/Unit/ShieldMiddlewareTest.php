@@ -34,6 +34,11 @@ class ShieldMiddlewareTest extends TestCase
             {
                 return false;
             }
+
+            public function headers(): array
+            {
+                return [];
+            }
         });
 
         $middleware = new Shield($manager);
@@ -55,6 +60,11 @@ class ShieldMiddlewareTest extends TestCase
             public function verify(Request $request): bool
             {
                 return true;
+            }
+
+            public function headers(): array
+            {
+                return [];
             }
         });
 

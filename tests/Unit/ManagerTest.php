@@ -73,4 +73,9 @@ class Example implements Service {
     {
         return true;
     }
+
+    public function headers(): array
+    {
+        return [];
+    }
 }

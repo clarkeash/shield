@@ -13,4 +13,9 @@ class GitHub implements Service
 
         return hash_equals($generated, $request->header('X-Hub-Signature', ''));
     }
+
+    public function headers(): array
+    {
+        return ['X-Hub-Signature'];
+    }
 }

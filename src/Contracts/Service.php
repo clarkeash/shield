@@ -7,4 +7,6 @@ use Illuminate\Http\Request;
 interface Service
 {
     public function verify(Request $request): bool;
+
+    public function headers(): array;
 }
