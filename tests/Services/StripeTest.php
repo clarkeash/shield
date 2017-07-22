@@ -3,14 +3,14 @@
 namespace Clarkeash\Shield\Test\Services;
 
 use Clarkeash\Shield\Contracts\Service;
-use Clarkeash\Shield\Services\GitHub;
+use Clarkeash\Shield\Services\Stripe;
 use Clarkeash\Shield\Test\TestCase;
 use PHPUnit\Framework\Assert;
 
-class GitHubTest extends TestCase
+class StripeTest extends TestCase
 {
     /**
-     * @var GitHub
+     * @var Stripe
      */
     protected $service;
 
@@ -18,13 +18,13 @@ class GitHubTest extends TestCase
     {
         parent::setUp();
 
-        $this->service = new GitHub;
+        $this->service = new Stripe;
     }
 
     /** @test */
     public function it_is_a_service()
     {
-        Assert::assertInstanceOf(Service::class, new GitHub);
+        Assert::assertInstanceOf(Service::class, new Stripe);
     }
 
     /** @test */
@@ -32,14 +32,18 @@ class GitHubTest extends TestCase
     {
         $token = 'raNd0mk3y';
 
-        $this->app['config']['shield.services.github.token'] = $token;
+        $this->app['config']['shield.services.stripe.token'] = $token;
 
         $content = 'sample content';
 
         $request = $this->request($content);
 
+        $time = time();
+
+        $signature = $time . '.' . $content;
+
         $headers = [
-            'X-Hub-Signature' => 'sha1=' . hash_hmac('sha1', $content, $token)
+            'Stripe-Signature' => 't=' . $time . ',v1=' . hash_hmac('sha256', $signature, $token)
         ];
 
         $request->headers->add($headers);
@@ -56,12 +60,47 @@ class GitHubTest extends TestCase
 
         $request = $this->request($content);
 
+        $time = time();
+
+        $signature = $time . '.' . $content;
+
         $headers = [
-            'X-Hub-Signature' => 'sha1=' . hash_hmac('sha1', $content, 'bad')
+            'Stripe-Signature' => 't=' . $time . ',v1=' . hash_hmac('sha256', $signature, 'bad')
         ];
 
         $request->headers->add($headers);
 
         Assert::assertFalse($this->service->verify($request));
+    }
+
+    /** @test */
+    public function it_will_fail_if_timestamp_is_over_tolerance()
+    {
+        $token = 'raNd0mk3y';
+
+        $this->app['config']['shield.services.stripe.token'] = $token;
+        $this->app['config']['shield.services.stripe.tolerance'] = 60 * 5;
+
+        $content = 'sample content';
+
+        $request = $this->request($content);
+
+        $time = time() - 61 * 5; // 5 seconds over
+
+        $signature = $time . '.' . $content;
+
+        $headers = [
+            'Stripe-Signature' => 't=' . $time . ',v1=' . hash_hmac('sha256', $signature, $token)
+        ];
+
+        $request->headers->add($headers);
+
+        Assert::assertFalse($this->service->verify($request));
+    }
+
+    /** @test */
+    public function it_has_correct_signatures_required()
+    {
+        Assert::assertArraySubset(['Stripe-Signature'], $this->service->headers());
     }
 }
