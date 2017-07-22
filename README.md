@@ -17,3 +17,19 @@
     <img src="http://img.shields.io/badge/author-@clarkeash-blue.svg?style=flat-square">
   </a>
 </p>
+
+Shield is a laravel middleware to protect against unverified webhooks from 3rd party services.
+
+## Installation
+
+You can pull in the package using [composer](https://getcomposer.org):
+
+```bash
+$ composer require clarkeash/shield
+```
+
+Publish the package configuration:
+
+```bash
+$ php artisan vendor:publish --tag=config
+```

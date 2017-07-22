@@ -1,6 +1,6 @@
 {
     "name": "clarkeash/shield",
-    "description": "A laravel middleware to shield against unverified webhooks from services",
+    "description": "A laravel middleware to shield against unverified webhooks from 3rd party services",
     "type": "library",
     "require-dev": {
         "phpunit/phpunit": "^6.2",
