@@ -66,6 +66,47 @@ class ManagerTest extends TestCase
     {
         $this->manager->register('example', new class{});
     }
+
+    /** @test */
+    public function it_fails_if_expected_header_is_not_there()
+    {
+        $this->manager->register('example', new class implements Service {
+
+            public function verify(Request $request): bool
+            {
+                return true;
+            }
+
+            public function headers(): array
+            {
+                return ['X-Custom-Header'];
+            }
+        });
+
+        Assert::assertFalse($this->manager->passes('example', $this->request()));
+    }
+
+    /** @test */
+    public function it_passes_if_expected_header_is_there()
+    {
+        $this->manager->register('example', new class implements Service {
+
+            public function verify(Request $request): bool
+            {
+                return true;
+            }
+
+            public function headers(): array
+            {
+                return ['X-Custom-Header'];
+            }
+        });
+
+        $request = $this->request();
+        $request->headers->add(['X-Custom-Header' => 'custom data']);
+
+        Assert::assertTrue($this->manager->passes('example', $request));
+    }
 }
 
 class Example implements Service {

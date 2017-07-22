@@ -22,6 +22,11 @@ class TestCase extends TestBench
         ];
     }
 
+    /**
+     * @param null $content
+     *
+     * @return Request
+     */
     protected function request($content = null)
     {
         return Request::create('http://example.com', 'POST', [], [], [], [], $content);
