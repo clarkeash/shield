@@ -74,7 +74,20 @@ class Manager
     {
         throw_unless($this->has($service), UnknownServiceException::class, 'Service ['.$service.'] is not recognised.');
 
-        return $this->get($service)->verify($request);
+        if($this->checkHeaders($this->get($service)->headers(), $request)) {
+            return $this->get($service)->verify($request);
+        }
+
+        return false;
+    }
+
+    public function checkHeaders(array $headers, Request $request)
+    {
+        foreach ($headers as $header) {
+            if(!$request->hasHeader($header)) return false;
+        }
+
+        return true;
     }
 
     /**
