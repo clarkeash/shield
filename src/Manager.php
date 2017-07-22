@@ -4,7 +4,6 @@ namespace Clarkeash\Shield;
 
 use Clarkeash\Shield\Contracts\Service;
 use Clarkeash\Shield\Exceptions\UnknownServiceException;
-use Clarkeash\Shield\Services\GitHub;
 use Closure;
 use Illuminate\Http\Request;
 
