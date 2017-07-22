@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1500749604">
+  <project timestamp="1500749604">
+    <package name="Clarkeash\Shield\Exceptions">
+      <file name="/Users/clarkeash/code/clarkeash/shield/src/Exceptions/Exception.php">
+        <class name="Exception" namespace="Clarkeash\Shield\Exceptions">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/clarkeash/code/clarkeash/shield/src/Exceptions/UnknownServiceException.php">
+        <class name="UnknownServiceException" namespace="Clarkeash\Shield\Exceptions">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Clarkeash\Shield\Http\Middleware">
+      <file name="/Users/clarkeash/code/clarkeash/shield/src/Http/Middleware/Shield.php">
+        <class name="Shield" namespace="Clarkeash\Shield\Http\Middleware">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+        </class>
+        <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="18" type="stmt" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="30" type="method" name="handle" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <metrics loc="38" ncloc="26" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </file>
+    </package>
+    <package name="Clarkeash\Shield">
+      <file name="/Users/clarkeash/code/clarkeash/shield/src/Manager.php">
+        <class name="Manager" namespace="Clarkeash\Shield">
+          <metrics complexity="13" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="26" coveredelements="26"/>
+        </class>
+        <line num="21" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="23" type="stmt" count="8"/>
+        <line num="25" type="stmt" count="8"/>
+        <line num="26" type="stmt" count="8"/>
+        <line num="31" type="method" name="load" visibility="protected" complexity="2" crap="2" count="8"/>
+        <line num="33" type="stmt" count="8"/>
+        <line num="34" type="stmt" count="8"/>
+        <line num="36" type="stmt" count="8"/>
+        <line num="43" type="method" name="has" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="45" type="stmt" count="7"/>
+        <line num="53" type="method" name="get" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="55" type="stmt" count="5"/>
+        <line num="62" type="method" name="put" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="64" type="stmt" count="8"/>
+        <line num="65" type="stmt" count="8"/>
+        <line num="73" type="method" name="passes" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="75" type="stmt" count="6"/>
+        <line num="77" type="stmt" count="5"/>
+        <line num="86" type="method" name="register" visibility="public" complexity="6" crap="6" count="8"/>
+        <line num="88" type="stmt" count="8"/>
+        <line num="89" type="stmt" count="8"/>
+        <line num="92" type="stmt" count="8"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="8"/>
+        <line num="97" type="stmt" count="8"/>
+        <line num="100" type="stmt" count="1"/>
+        <metrics loc="102" ncloc="67" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="26" coveredelements="26"/>
+      </file>
+    </package>
+    <package name="Clarkeash\Shield\Providers">
+      <file name="/Users/clarkeash/code/clarkeash/shield/src/Providers/ShieldServiceProvider.php">
+        <class name="ShieldServiceProvider" namespace="Clarkeash\Shield\Providers">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+        </class>
+        <line num="12" type="method" name="boot" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="14" type="stmt" count="11"/>
+        <line num="15" type="stmt" count="11"/>
+        <line num="16" type="stmt" count="11"/>
+        <line num="18" type="stmt" count="11"/>
+        <line num="19" type="stmt" count="11"/>
+        <line num="21" type="method" name="register" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="23" type="stmt" count="11"/>
+        <line num="24" type="stmt" count="11"/>
+        <line num="25" type="stmt" count="11"/>
+        <line num="27" type="stmt" count="11"/>
+        <metrics loc="28" ncloc="28" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+      </file>
+    </package>
+    <package name="Clarkeash\Shield\Services">
+      <file name="/Users/clarkeash/code/clarkeash/shield/src/Services/GitHub.php">
+        <class name="GitHub" namespace="Clarkeash\Shield\Services">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="10" type="method" name="verify" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="12" type="stmt" count="2"/>
+        <line num="14" type="stmt" count="2"/>
+        <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+    </package>
+    <metrics files="6" loc="200" ncloc="153" classes="4" methods="12" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="35" elements="47" coveredelements="47"/>
+  </project>
+</coverage>
