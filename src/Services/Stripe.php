@@ -2,14 +2,13 @@
 
 namespace Clarkeash\Shield\Services;
 
-use Clarkeash\Shield\Contracts\Service;
 use Illuminate\Http\Request;
 
-class Stripe implements Service
+class Stripe extends BaseService
 {
     public function verify(Request $request): bool
     {
-        $processed = $this->process($request->header('Stripe-Signature'));
+        $processed = $this->process($this->header($request, 'Stripe-Signature'));
 
         $tolerance = config('shield.services.stripe.tolerance', 60 * 5);
 
