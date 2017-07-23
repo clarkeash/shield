@@ -44,6 +44,36 @@ class BaseServiceTest extends TestCase
 
         Assert::assertEquals('a', $this->service->header($request, 'X-Custom-Header', 'sample'));
     }
+
+    /** @test */
+    public function it_will_fail_if_headers_are_not_provided()
+    {
+        Assert::assertFalse($this->service->checkBasic($this->request(), 'user', 'pass'));
+    }
+
+    /** @test */
+    public function it_will_fail_if_invalid_credentials()
+    {
+        $request = $this->request();
+        $request->headers->add([
+            'PHP-AUTH-USER' => 'user',
+            'PHP-AUTH-PW' => 'password',
+        ]);
+
+        Assert::assertFalse($this->service->checkBasic($request, 'user', 'pass'));
+    }
+
+    /** @test */
+    public function it_will_pass_if_correct_credentials()
+    {
+        $request = $this->request();
+        $request->headers->add([
+            'PHP-AUTH-USER' => 'user',
+            'PHP-AUTH-PW' => 'pass',
+        ]);
+
+        Assert::assertTrue($this->service->checkBasic($request, 'user', 'pass'));
+    }
 }
 
 class Stub extends BaseService {
