@@ -36,3 +36,21 @@ Publish the package configuration:
 ```bash
 $ php artisan vendor:publish --tag=config
 ```
+
+## Usage
+
+Create your webhook route in `routes/api.php` and add the middleware like so:
+
+```php
+Route::middleware('shield:github')->post('/hooks/github', 'HooksController@github');
+```
+
+The name after `shield:` is the name set in `config/shield.php` in the `enabled` section.
+
+## Services
+
+* GitHub
+* Stripe
+* Zapier
+
+Feel free to submit a PR to support other services.
