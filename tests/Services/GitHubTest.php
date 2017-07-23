@@ -66,7 +66,7 @@ class GitHubTest extends TestCase
     }
 
     /** @test */
-    public function it_has_correct_signatures_required()
+    public function it_has_correct_headers_required()
     {
         Assert::assertArraySubset(['X-Hub-Signature'], $this->service->headers());
     }

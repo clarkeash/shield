@@ -4,6 +4,7 @@ return [
     'enabled' => [
         'github' => \Clarkeash\Shield\Services\GitHub::class,
         'stripe' => \Clarkeash\Shield\Services\Stripe::class,
+        'zapier' => \Clarkeash\Shield\Services\Zapier::class,
     ],
 
     'services' => [
@@ -13,6 +14,10 @@ return [
         'stripe' => [
             'token' => 'your-custom-webhook-token',
             'tolerance' => \Carbon\Carbon::SECONDS_PER_MINUTE * 5
+        ],
+        'zapier' => [
+            'username' => 'your-basic-auth-user',
+            'password' => 'your-basic-auth-password',
         ]
     ]
 ];
