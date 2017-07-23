@@ -3,12 +3,16 @@
 return [
     'enabled' => [
         'github' => \Clarkeash\Shield\Services\GitHub::class,
+        'gitlab' => \Clarkeash\Shield\Services\GitLab::class,
         'stripe' => \Clarkeash\Shield\Services\Stripe::class,
         'zapier' => \Clarkeash\Shield\Services\Zapier::class,
     ],
 
     'services' => [
         'github' => [
+            'token' => 'your-custom-webhook-token'
+        ],
+        'gitlab' => [
             'token' => 'your-custom-webhook-token'
         ],
         'stripe' => [

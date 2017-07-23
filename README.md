@@ -50,6 +50,7 @@ The name after `shield:` is the name set in `config/shield.php` in the `enabled`
 ## Services
 
 * GitHub
+* GitLab
 * Stripe
 * Zapier
 
