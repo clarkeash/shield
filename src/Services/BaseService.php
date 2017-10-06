@@ -17,7 +17,6 @@ abstract class BaseService implements Service
     public function header(Request $request, $name, $default = '')
     {
         return $request->headers->get($name, $default, true);
-
     }
 
     /**

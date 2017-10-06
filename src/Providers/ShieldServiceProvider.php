@@ -3,8 +3,6 @@
 namespace Clarkeash\Shield\Providers;
 
 use Clarkeash\Shield\Http\Middleware\Shield;
-use Clarkeash\Shield\Manager;
-use Clarkeash\Shield\Services\GitHub;
 use Illuminate\Support\ServiceProvider;
 
 class ShieldServiceProvider extends ServiceProvider
