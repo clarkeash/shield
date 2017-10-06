@@ -14,8 +14,6 @@
             "email": "me@ashleyclarke.me"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {},
     "autoload": {
         "psr-4": {
@@ -32,6 +30,12 @@
             "providers": [
                 "Clarkeash\\Shield\\Providers\\ShieldServiceProvider"
             ]
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "platform": {
+            "php": "7.0"
         }
     }
 }
