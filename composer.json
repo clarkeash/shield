@@ -5,7 +5,8 @@
     "require-dev": {
         "php": ">=7.0.0",
         "phpunit/phpunit": "~6.2",
-        "orchestra/testbench": "~3.5"
+        "orchestra/testbench": "~3.5",
+        "mikey179/vfsStream": "^1.6"
     },
     "license": "MIT",
     "authors": [

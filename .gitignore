@@ -2,3 +2,4 @@
 /.idea
 .DS_Store
 coverage.xml
+composer.phar
