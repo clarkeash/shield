@@ -53,5 +53,6 @@ The name after `shield:` is the name set in `config/shield.php` in the `enabled`
 * GitLab
 * Stripe
 * Zapier
+* TravisCI
 
 Feel free to submit a PR to support other services.
