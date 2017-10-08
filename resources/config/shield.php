@@ -6,6 +6,7 @@ return [
         'gitlab' => \Clarkeash\Shield\Services\GitLab::class,
         'stripe' => \Clarkeash\Shield\Services\Stripe::class,
         'zapier' => \Clarkeash\Shield\Services\Zapier::class,
+        'trello' => \Clarkeash\Shield\Services\Trello::class
     ],
 
     'services' => [
@@ -22,6 +23,9 @@ return [
         'zapier' => [
             'username' => 'your-basic-auth-user',
             'password' => 'your-basic-auth-password',
+        ],
+        'trello' => [
+            'app_secret' => 'your-app-secret'
         ]
     ]
 ];
