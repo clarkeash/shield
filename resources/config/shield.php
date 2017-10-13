@@ -7,7 +7,8 @@ return [
         'gitlab' => \Clarkeash\Shield\Services\GitLab::class,
         'stripe' => \Clarkeash\Shield\Services\Stripe::class,
         'zapier' => \Clarkeash\Shield\Services\Zapier::class,
-        'trello' => \Clarkeash\Shield\Services\Trello::class
+        'trello' => \Clarkeash\Shield\Services\Trello::class,
+        'mailgun' => \Clarkeash\Shield\Services\Mailgun::class,
     ],
 
     'services' => [
@@ -33,6 +34,10 @@ return [
         ],
         'trello' => [
             'app_secret' => 'your-app-secret'
-        ]
+        ],
+        'mailgun' => [
+            'token' => env('MAILGUN_SECRET', 'your-custom-webhook-token'),
+            'tolerance' => \Carbon\Carbon::SECONDS_PER_MINUTE * 5,
+        ],
     ]
 ];
