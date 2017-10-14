@@ -2,6 +2,7 @@
 
 return [
     'enabled' => [
+        'braintree' => \Clarkeash\Shield\Services\Braintree::class,
         'github' => \Clarkeash\Shield\Services\GitHub::class,
         'gitlab' => \Clarkeash\Shield\Services\GitLab::class,
         'stripe' => \Clarkeash\Shield\Services\Stripe::class,
@@ -9,6 +10,12 @@ return [
     ],
 
     'services' => [
+        'braintree' => [
+            'environment' => 'development',
+            'merchant_id' => 'your-merchant-id',
+            'public_key' => 'your-public-key',
+            'private_key' => 'your-private-key',
+        ],
         'github' => [
             'token' => 'your-custom-webhook-token'
         ],
