@@ -1,4 +1,11 @@
-![shield](https://user-images.githubusercontent.com/1612186/28499822-09510182-6fbf-11e7-9c43-bb70fa9c89b0.png)
+# Project Moved
+
+This project has moved to https://github.com/laravel-shield/shield.
+
+I am still happy for your contributions please read the guide here: http://laravel-shield.com/contributing
+
+
+
 
 
 # Shield
