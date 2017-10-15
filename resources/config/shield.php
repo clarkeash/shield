@@ -7,7 +7,8 @@ return [
         'gitlab' => \Clarkeash\Shield\Services\GitLab::class,
         'stripe' => \Clarkeash\Shield\Services\Stripe::class,
         'zapier' => \Clarkeash\Shield\Services\Zapier::class,
-        'trello' => \Clarkeash\Shield\Services\Trello::class
+        'trello' => \Clarkeash\Shield\Services\Trello::class,
+        'bitbucket' => \Clarkeash\Shield\Services\Bitbucket::class
     ],
 
     'services' => [
@@ -33,6 +34,14 @@ return [
         ],
         'trello' => [
             'app_secret' => 'your-app-secret'
+        ],
+        'bitbucket' => [
+            'allowed_ips' => [
+                '104.192.143.0/24',
+                '34.198.203.127',
+                '34.198.178.64',
+                '34.198.32.85'
+            ]
         ]
     ]
 ];

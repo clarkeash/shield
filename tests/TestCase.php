@@ -27,8 +27,8 @@ class TestCase extends TestBench
      *
      * @return Request
      */
-    protected function request($content = null)
+    protected function request($content = null, $ip = '')
     {
-        return Request::create('http://example.com', 'POST', [], [], [], [], $content);
+        return Request::create('http://example.com', 'POST', [], [], [], ['REMOTE_ADDR' => $ip], $content);
     }
 }
