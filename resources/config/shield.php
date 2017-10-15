@@ -7,7 +7,7 @@ return [
         'gitlab' =>     \Clarkeash\Shield\Services\GitLab::class,
         'stripe' =>     \Clarkeash\Shield\Services\Stripe::class,
         'zapier' =>     \Clarkeash\Shield\Services\Zapier::class,
-        'trello' =>     \Clarkeash\Shield\Services\Trello::class
+        'trello' =>     \Clarkeash\Shield\Services\Trello::class,
         'facebook-messenger'    => \Clarkeash\Shield\Services\FacebookMessenger::class
     ],
 
