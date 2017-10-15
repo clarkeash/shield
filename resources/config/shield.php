@@ -2,10 +2,11 @@
 
 return [
     'enabled' => [
-        'github' => \Clarkeash\Shield\Services\GitHub::class,
-        'gitlab' => \Clarkeash\Shield\Services\GitLab::class,
-        'stripe' => \Clarkeash\Shield\Services\Stripe::class,
-        'zapier' => \Clarkeash\Shield\Services\Zapier::class,
+        'github'                => \Clarkeash\Shield\Services\GitHub::class,
+        'gitlab'                => \Clarkeash\Shield\Services\GitLab::class,
+        'stripe'                => \Clarkeash\Shield\Services\Stripe::class,
+        'zapier'                => \Clarkeash\Shield\Services\Zapier::class,
+        'facebook-messenger'    => \Clarkeash\Shield\Services\FacebookMessenger::class
     ],
 
     'services' => [
