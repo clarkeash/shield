@@ -5,8 +5,7 @@ This project has moved to https://github.com/laravel-shield/shield.
 I am still happy for your contributions please read the guide here: http://laravel-shield.com/contributing
 
 
-
-
+<br><br><br>
 
 # Shield
 
