@@ -812,21 +812,21 @@
         },
         {
             "name": "orchestra/testbench",
-            "version": "v3.5.1",
+            "version": "v3.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "2b2feb99e4254632cf301116a1de2231c0ec632c"
+                "reference": "a373ba077c60a90ffcaea9eb8ac2d6605db94a04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/2b2feb99e4254632cf301116a1de2231c0ec632c",
-                "reference": "2b2feb99e4254632cf301116a1de2231c0ec632c",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/a373ba077c60a90ffcaea9eb8ac2d6605db94a04",
+                "reference": "a373ba077c60a90ffcaea9eb8ac2d6605db94a04",
                 "shasum": ""
             },
             "require": {
                 "laravel/framework": "~5.5.0",
-                "orchestra/testbench-core": "~3.5.2",
+                "orchestra/testbench-core": "~3.5.4",
                 "php": ">=7.0",
                 "phpunit/phpunit": "~6.0"
             },
@@ -864,20 +864,20 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2017-10-02T11:53:09+00:00"
+            "time": "2017-10-08T08:01:03+00:00"
         },
         {
             "name": "orchestra/testbench-core",
-            "version": "v3.5.2",
+            "version": "v3.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench-core.git",
-                "reference": "c1ccd1bde213ebf739bfbcbc0e743f1d1f306aa8"
+                "reference": "afecbf0d68c43f0fd7ae53447bb28bcf08faf0ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/c1ccd1bde213ebf739bfbcbc0e743f1d1f306aa8",
-                "reference": "c1ccd1bde213ebf739bfbcbc0e743f1d1f306aa8",
+                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/afecbf0d68c43f0fd7ae53447bb28bcf08faf0ad",
+                "reference": "afecbf0d68c43f0fd7ae53447bb28bcf08faf0ad",
                 "shasum": ""
             },
             "require": {
@@ -929,7 +929,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2017-09-28T15:25:06+00:00"
+            "time": "2017-10-08T07:47:55+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -1542,16 +1542,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "6.4.0",
+            "version": "6.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "a1bcaca096998de32c29535fdd2dea0c475e8f61"
+                "reference": "ae6e2e062ff55263c7b04374c190aca45872b26a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a1bcaca096998de32c29535fdd2dea0c475e8f61",
-                "reference": "a1bcaca096998de32c29535fdd2dea0c475e8f61",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ae6e2e062ff55263c7b04374c190aca45872b26a",
+                "reference": "ae6e2e062ff55263c7b04374c190aca45872b26a",
                 "shasum": ""
             },
             "require": {
@@ -1622,7 +1622,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-10-06T03:14:57+00:00"
+            "time": "2017-10-15T06:16:19+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

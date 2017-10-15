@@ -15,7 +15,6 @@ class ShieldServiceProvider extends ServiceProvider
 
         $this->app['router']->aliasMiddleware('shield', Shield::class);
     }
-
     public function register()
     {
         $this->mergeConfigFrom(
