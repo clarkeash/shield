@@ -22,6 +22,9 @@ return [
         'zapier' => [
             'username' => 'your-basic-auth-user',
             'password' => 'your-basic-auth-password',
+        ],
+        'facebook-messenger' => [
+            'app_secret' => 'your-app-secret-key'
         ]
     ]
 ];
