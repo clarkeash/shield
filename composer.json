@@ -5,7 +5,8 @@
     "require-dev": {
         "php": ">=7.0.0",
         "phpunit/phpunit": "~6.2",
-        "orchestra/testbench": "~3.5"
+        "orchestra/testbench": "~3.5",
+        "braintree/braintree_php": "^3.25"
     },
     "license": "MIT",
     "authors": [
@@ -31,6 +32,9 @@
                 "Clarkeash\\Shield\\Providers\\ShieldServiceProvider"
             ]
         }
+    },
+    "suggest": {
+        "braintree/braintree_php": "Required to use the Braintree shield"
     },
     "config": {
         "preferred-install": "dist",
