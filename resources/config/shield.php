@@ -7,7 +7,8 @@ return [
         'gitlab' => \Clarkeash\Shield\Services\GitLab::class,
         'stripe' => \Clarkeash\Shield\Services\Stripe::class,
         'zapier' => \Clarkeash\Shield\Services\Zapier::class,
-        'trello' => \Clarkeash\Shield\Services\Trello::class
+        'trello' => \Clarkeash\Shield\Services\Trello::class,
+        'recurly' => \Clarkeash\Shield\Services\Recurly::class
     ],
 
     'services' => [
@@ -33,6 +34,10 @@ return [
         ],
         'trello' => [
             'app_secret' => 'your-app-secret'
+        ],
+        'recurly' => [
+            'username' => 'your-basic-auth-user',
+            'password' => 'your-basic-auth-password',
         ]
     ]
 ];
