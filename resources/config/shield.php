@@ -36,8 +36,8 @@ return [
             'app_secret' => 'your-app-secret'
         ],
         'recurly' => [
-            'username' => 'your-basic-auth-user',
-            'password' => 'your-basic-auth-password',
+            'username' => 'your-curstom-http-auth-username',
+            'password' => 'your-curstom-http-auth-password',
         ]
     ]
 ];
